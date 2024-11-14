@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model obslugaformularzy.Models.Dane
+
+<form asp-action="Form" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label>Imię:</label>
+        <input asp-for="Imie" />
+        <span asp-validation-for="Imie"></span>
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div>
+        <label>Temat:</label>
+        <input asp-for="Temat" />
+        <span asp-validation-for="Temat"></span>
+    </div>
+
+    <div>
+        <label>Treść:</label>
+        <textarea asp-for="Tresc"></textarea>
+        <span asp-validation-for="Tresc"></span>
+    </div>
+
+    <button type="submit">Wyślij</button>
+</form>
